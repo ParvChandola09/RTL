@@ -178,9 +178,6 @@ end
 
 always@ (posedge clk) begin
 data_in <= RAMM[Address];
-if(data_out==16'hxxxx)
-$fwriteb(mcd1,"%d \n",0);
-else
 $fwriteb(mcd1,"%d \n",data_out);
 end
 
